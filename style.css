@@ -531,11 +531,42 @@ h1, h2, h3, h4, h5 {
   padding: 2rem; border-top: 3px solid var(--accent);
 }
 .skill-card h3 {
-  font-size: 1.2rem; color: var(--text-main); margin-bottom: 1.5rem;
-  display: flex; align-items: center; gap: 0.8rem;
+  font-size: 1.2rem; color: var(--text-main); margin-bottom: 1.8rem;
+  display: flex; align-items: center; justify-content: center; gap: 0.8rem;
 }
 .skill-card h3 i { color: var(--accent); }
-.skill-card .tags .tag { padding: 0.6rem 1.2rem; border-radius: var(--radius-sm); font-family: 'Fira Code', monospace; }
+.skill-card .tags {
+  justify-content: center;
+  gap: 1.2rem;
+}
+.skill-card .tags .tag {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem; /* Smaller gap */
+  padding: 0.8rem;
+  width: 100px;
+  height: 100px; /* Fixed height for square shape */
+  border-radius: var(--radius-sm);
+  font-family: 'Fira Code', monospace;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.skill-card .tags .tag i {
+  font-size: 2.2rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.skill-card .tags .tag span {
+  font-size: 0.65rem;
+  display: block;
+  opacity: 0.8;
+  line-height: 1.1;
+  word-wrap: break-word;
+}
 
 /* =========================================================================
    8. PROJECTS SECTION
